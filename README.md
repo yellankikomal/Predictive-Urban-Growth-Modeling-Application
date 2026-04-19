@@ -82,6 +82,6 @@ To use MongoDB Atlas:
 ---
 
 ## 📂 Project Structure
-- `/backend`: FastAPI Python server, ML logic (`ml_engine.py`), and MongoDB connection.
+- `/backend`: FastAPI Python server, ML logic (`ml_engine.py`), and optional MongoDB connection (defaults to in-memory storage).
 - `/frontend`: React + Vite application with Leaflet maps.
 - `/data`: Contains `mock_bangalore_data.csv` for easy testing.
