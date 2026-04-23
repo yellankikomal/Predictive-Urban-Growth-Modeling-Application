@@ -20,8 +20,8 @@ A full-stack real estate predictive analytics platform built with React, FastAPI
 ## 📦 Step-by-Step Setup Instructions
 
 ### 1. Database Setup (MongoDB Atlas)
-By default, the backend will use an **in-memory mock database** if MongoDB is not configured, which is great for quick testing. 
-To use MongoDB Atlas:
+This project is configured to use **MongoDB** for persistence.
+To connect with MongoDB Atlas:
 1. Create a free cluster at [MongoDB Atlas](https://www.mongodb.com/cloud/atlas).
 2. Get your connection string (e.g., `mongodb+srv://<username>:<password>@cluster0...`).
 3. In the `backend` folder, create a `.env` file (you can copy from `.env.example`) and add:
@@ -83,6 +83,6 @@ To use MongoDB Atlas:
 ---
 
 ## 📂 Project Structure
-- `/backend`: FastAPI Python server, ML logic (`ml_engine.py`), and optional MongoDB connection (defaults to in-memory storage).
+- `/backend`: FastAPI Python server, ML logic (`ml_engine.py`), and MongoDB integration for data storage.
 - `/frontend`: React + Vite application with Leaflet maps.
 - `/data`: Contains `mock_bangalore_data.csv` for easy testing.
