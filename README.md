@@ -24,9 +24,10 @@ By default, the backend will use an **in-memory mock database** if MongoDB is no
 To use MongoDB Atlas:
 1. Create a free cluster at [MongoDB Atlas](https://www.mongodb.com/cloud/atlas).
 2. Get your connection string (e.g., `mongodb+srv://<username>:<password>@cluster0...`).
-3. In the `backend` folder, create a `.env` file and add:
+3. In the `backend` folder, create a `.env` file (you can copy from `.env.example`) and add:
    ```env
    MONGODB_URI=your_mongodb_connection_string
+   MONGODB_DB_NAME=urban_growth_db
    ```
 
 ### 2. Backend Setup

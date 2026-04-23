@@ -1,12 +1,12 @@
 import os
-import motor.motor_asyncio
 from pymongo import MongoClient
+from pymongo.errors import PyMongoError
 from dotenv import load_dotenv
 
 load_dotenv()
 
 MONGODB_URI = os.getenv("MONGODB_URI")
-DB_NAME = "urban_growth_db"
+DB_NAME = os.getenv("MONGODB_DB_NAME", "urban_growth_db")
 
 client = None
 db = None
@@ -21,8 +21,16 @@ def get_db():
     global client, db
     if MONGODB_URI:
         if client is None:
-            client = MongoClient(MONGODB_URI)
-            db = client[DB_NAME]
+            try:
+                client = MongoClient(MONGODB_URI, serverSelectionTimeoutMS=5000)
+                client.admin.command("ping")
+                db = client[DB_NAME]
+                print(f"Connected to MongoDB database: {DB_NAME}")
+            except PyMongoError as e:
+                print(f"WARNING: MongoDB connection failed ({e}). Using in-memory fallback.")
+                client = None
+                db = None
+                return _mock_db
         return db
     else:
         print("WARNING: MONGODB_URI not found. Using in-memory fallback.")

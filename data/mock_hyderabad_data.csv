@@ -1,0 +1,13 @@
+location,latitude,longitude,current_price_sqft,price_growth_rate,rental_yield,listing_density,infrastructure_score
+Gachibowli,17.4401,78.3489,9200,8.7,4.5,78,8.6
+HITEC City,17.4435,78.3772,9800,8.1,4.2,82,8.8
+Madhapur,17.4483,78.3915,10500,7.4,3.9,69,8.3
+Kondapur,17.4615,78.3566,8900,8.9,4.4,74,8.1
+Miyapur,17.4960,78.3562,7200,7.8,4.3,63,7.4
+Kukatpally,17.4948,78.3996,7600,7.1,4.0,66,7.2
+Banjara Hills,17.4126,78.4347,13500,4.8,3.1,35,9.0
+Jubilee Hills,17.4324,78.4071,14800,4.5,2.9,31,9.2
+Uppal,17.4058,78.5591,6100,8.4,4.6,58,6.8
+LB Nagar,17.3497,78.5578,5800,7.6,4.7,54,6.6
+Manikonda,17.4062,78.3908,8400,9.2,4.5,71,7.9
+Nallagandla,17.4698,78.3184,8100,8.5,4.1,60,7.7
